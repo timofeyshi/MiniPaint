@@ -13,21 +13,21 @@ namespace MiniPaint
         Circle circle;
        
         private bool ownMouseDown = false;
-        Bitmap bmp, tempDraw;
+        Bitmap bitmap, tempBitmap;
 
         public void setBmp(Bitmap bmp)
         {
-            this.bmp = bmp;
+            this.bitmap = bmp;
         }
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
 
-            tempDraw = (Bitmap)bmp.Clone();
-            Graphics temp = Graphics.FromImage(tempDraw);
-            temp.DrawEllipse(Pens.Black, circle.GetFirstPoint().GetX(), circle.GetFirstPoint().GetY(), circle.getSize(), circle.getSize());
+            tempBitmap = (Bitmap)bitmap.Clone();
+            Graphics temp = Graphics.FromImage(tempBitmap);
+            temp.DrawEllipse(Pens.Black, circle.GetFirstPoint().getX(), circle.GetFirstPoint().getY(), circle.getSize(), circle.getSize());
 
-            e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
+            e.Graphics.DrawImageUnscaled(tempBitmap, 0, 0);
             temp.Dispose();
         }
 
@@ -36,11 +36,7 @@ namespace MiniPaint
         {
             if (ownMouseDown)
             {
-
-
-
-                circle.setSize(e.X - circle.GetFirstPoint().GetX());
-
+                circle.setSize(e.X - circle.GetFirstPoint().getX());
             }
         }
 
@@ -48,15 +44,15 @@ namespace MiniPaint
         public override void OnMouseUp(Object sender, MouseEventArgs e)
         {
             ownMouseDown = false;
-            bmp = (Bitmap)tempDraw.Clone();
-            Bmp = bmp;
+            bitmap = (Bitmap)tempBitmap.Clone();
+            MainBitmap = bitmap;
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             circle = new Circle(new Point(e.X, e.Y), 0);
-            tempDraw = (Bitmap)bmp.Clone();
+            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
         }

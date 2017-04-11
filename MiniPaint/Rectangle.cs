@@ -16,25 +16,25 @@ namespace MiniPaint
 
         public Rectangle(Point firstPoint, int width, int height) : base(firstPoint)
         {
-            SetWidth(width);
-            SetHeight(height);
+            setWidth(width);
+            setHeight(height);
         }
 
 
-        public void SetWidth(int width)
+        public void setWidth(int width)
         {
             this.Width = width;
         }
 
-        public void SetHeight(int height)
+        public void setHeight(int height)
         {
             this.Height = height;
         }
-        public int GetWidth()
+        public int getWidth()
         {
             return Width;
         }
-        public int GetHeight()
+        public int getHeight()
         {
             return Height;
         }

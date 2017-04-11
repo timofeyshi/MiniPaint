@@ -11,12 +11,12 @@ namespace MiniPaint
     abstract class FigureDrawer : Panel
     {
 
-        private Bitmap bmp;
+        private Bitmap mainBitmap;
 
-        public Bitmap Bmp
+        public Bitmap MainBitmap
         {
-            get { return bmp; }
-            set { bmp = value; }
+            get { return mainBitmap; }
+            set { mainBitmap = value; }
         }
 
         public abstract void OnPaint(object sender, PaintEventArgs e);

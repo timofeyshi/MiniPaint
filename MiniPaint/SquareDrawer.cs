@@ -14,23 +14,23 @@ namespace MiniPaint
 
 
         private bool ownMouseDown = false;
-        Bitmap bmp, tempDraw;
+        Bitmap bitmap, tempBitmap;
 
 
         public void setBmp(Bitmap bmp)
         {
-            this.bmp = bmp;
+            this.bitmap = bmp;
         }
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
 
-            tempDraw = (Bitmap)bmp.Clone();
-            Graphics temp = Graphics.FromImage(tempDraw);
+            tempBitmap = (Bitmap)bitmap.Clone();
+            Graphics temp = Graphics.FromImage(tempBitmap);
             //DrawRectangle(Pens.Black, rectangle.GetFirstPoint().GetX(), rectangle.GetFirstPoint().GetY(), rectangle.GetHeight(), rectangle.GetWidth());
-            temp.DrawRectangle(Pens.Black, square.GetFirstPoint().GetX(), square.GetFirstPoint().GetY(), square.GetHeight(), square.GetWidth());
+            temp.DrawRectangle(Pens.Black, square.GetFirstPoint().getX(), square.GetFirstPoint().getY(), square.getHeight(), square.getWidth());
 
-            e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
+            e.Graphics.DrawImageUnscaled(tempBitmap, 0, 0);
             temp.Dispose();
         }
 
@@ -39,8 +39,8 @@ namespace MiniPaint
             if (ownMouseDown)
             {
 
-                square.SetWidth(e.Y - square.GetFirstPoint().GetY());
-                square.SetHeight(e.Y - square.GetFirstPoint().GetY());
+                square.setWidth(e.Y - square.GetFirstPoint().getY());
+                square.setHeight(e.Y - square.GetFirstPoint().getY());
 
 
             }
@@ -50,15 +50,15 @@ namespace MiniPaint
         public override void OnMouseUp(Object sender, MouseEventArgs e)
         {
             ownMouseDown = false;
-            bmp = (Bitmap)tempDraw.Clone();
-            Bmp = bmp;
+            bitmap = (Bitmap)tempBitmap.Clone();
+            MainBitmap = bitmap;
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             square = new Square(new Point(e.X, e.Y), 0);
-            tempDraw = (Bitmap)bmp.Clone();
+            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
         }

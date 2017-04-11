@@ -28,7 +28,7 @@ namespace MiniPaint
 
         public override void Draw(Graphics graphicField)
         {
-            graphicField.DrawLine(Pens.Black, GetFirstPoint().GetX(), GetFirstPoint().GetY(), secondPoint.GetX(), secondPoint.GetY());
+            graphicField.DrawLine(Pens.Black, GetFirstPoint().getX(), GetFirstPoint().getY(), secondPoint.getX(), secondPoint.getY());
         }
     }
 }

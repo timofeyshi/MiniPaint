@@ -13,22 +13,22 @@ namespace MiniPaint
         Ellipse ellipse;
      
         private bool ownMouseDown = false;
-        Bitmap bmp, tempDraw;
+        Bitmap bitmap, tempBitmap;
 
 
         public void setBmp(Bitmap bmp)
         {
-            this.bmp = bmp;
+            this.bitmap = bmp;
         }
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
 
-            tempDraw = (Bitmap)bmp.Clone();
-            Graphics temp = Graphics.FromImage(tempDraw);
-            temp.DrawEllipse(Pens.Black, ellipse.GetFirstPoint().GetX(), ellipse.GetFirstPoint().GetY(), ellipse.GetSecondPoint().GetX(), ellipse.GetSecondPoint().GetY());
+            tempBitmap = (Bitmap)bitmap.Clone();
+            Graphics temp = Graphics.FromImage(tempBitmap);
+            temp.DrawEllipse(Pens.Black, ellipse.GetFirstPoint().getX(), ellipse.GetFirstPoint().getY(), ellipse.getSecondPoint().getX(), ellipse.getSecondPoint().getY());
 
-            e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
+            e.Graphics.DrawImageUnscaled(tempBitmap, 0, 0);
             temp.Dispose();
         }
 
@@ -36,7 +36,7 @@ namespace MiniPaint
         {
             if (ownMouseDown)
             {
-                ellipse.SetSecondPoint(new Point(e.X, e.Y));
+                ellipse.setSecondPoint(new Point(e.X, e.Y));
             }
         }
 
@@ -44,15 +44,15 @@ namespace MiniPaint
         public override void OnMouseUp(Object sender, MouseEventArgs e)
         {
             ownMouseDown = false;
-            bmp = (Bitmap)tempDraw.Clone();
-            Bmp = bmp;
+            bitmap = (Bitmap)tempBitmap.Clone();
+            MainBitmap = bitmap;
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             ellipse = new Ellipse(new Point(e.X, e.Y), new Point(e.X, e.Y));
-            tempDraw = (Bitmap)bmp.Clone();
+            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
         }

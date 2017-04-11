@@ -11,27 +11,24 @@ namespace MiniPaint
     class TriangleDrawer : FigureDrawer
     {
         RightTriangle rightTriangle;
-        
-
         private bool ownMouseDown = false;
-        Bitmap bmp, tempDraw;
+        Bitmap bitmap, tempBitmap;
 
         public void setBmp(Bitmap bmp)
         {
-            this.bmp = bmp;
+            this.bitmap = bmp;
         }
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
 
-            tempDraw = (Bitmap)bmp.Clone();
-            Graphics temp = Graphics.FromImage(tempDraw);
-            // temp.DrawRectangle(Pens.Red, rectangle.GetFirstPoint().GetX(), rectangle.GetFirstPoint().GetY(), rectangle.GetHeight(), rectangle.GetWidth());
-            temp.DrawLine(Pens.Green, rightTriangle.GetFirstPoint().GetX(), rightTriangle.GetFirstPoint().GetY(), rightTriangle.GetFirstPoint().GetX() + rightTriangle.GetWidth(), rightTriangle.GetFirstPoint().GetY());
-            temp.DrawLine(Pens.Green, rightTriangle.GetFirstPoint().GetX(), rightTriangle.GetFirstPoint().GetY(), rightTriangle.GetFirstPoint().GetX(), rightTriangle.GetFirstPoint().GetY() + rightTriangle.GetHeight());
-            temp.DrawLine(Pens.Green, rightTriangle.GetFirstPoint().GetX(), rightTriangle.GetFirstPoint().GetY() + rightTriangle.GetHeight(), rightTriangle.GetFirstPoint().GetX() + rightTriangle.GetWidth(), rightTriangle.GetFirstPoint().GetY());
+            tempBitmap = (Bitmap)bitmap.Clone();
+            Graphics temp = Graphics.FromImage(tempBitmap);
+            temp.DrawLine(Pens.Green, rightTriangle.GetFirstPoint().getX(), rightTriangle.GetFirstPoint().getY(), rightTriangle.GetFirstPoint().getX() + rightTriangle.getWidth(), rightTriangle.GetFirstPoint().getY());
+            temp.DrawLine(Pens.Green, rightTriangle.GetFirstPoint().getX(), rightTriangle.GetFirstPoint().getY(), rightTriangle.GetFirstPoint().getX(), rightTriangle.GetFirstPoint().getY() + rightTriangle.getHeight());
+            temp.DrawLine(Pens.Green, rightTriangle.GetFirstPoint().getX(), rightTriangle.GetFirstPoint().getY() + rightTriangle.getHeight(), rightTriangle.GetFirstPoint().getX() + rightTriangle.getWidth(), rightTriangle.GetFirstPoint().getY());
 
-            e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
+            e.Graphics.DrawImageUnscaled(tempBitmap, 0, 0);
             temp.Dispose();
         }
 
@@ -44,8 +41,8 @@ namespace MiniPaint
 
 
 
-                rightTriangle.SetHeight(e.Y - rightTriangle.GetFirstPoint().GetY());
-                rightTriangle.SetWidth(e.X - rightTriangle.GetFirstPoint().GetX());
+                rightTriangle.setHeight(e.Y - rightTriangle.GetFirstPoint().getY());
+                rightTriangle.setWidth(e.X - rightTriangle.GetFirstPoint().getX());
 
 
             }
@@ -55,15 +52,15 @@ namespace MiniPaint
         public override void OnMouseUp(Object sender, MouseEventArgs e)
         {
             ownMouseDown = false;
-            bmp = (Bitmap)tempDraw.Clone();
-            Bmp = bmp;
+            bitmap = (Bitmap)tempBitmap.Clone();
+            MainBitmap = bitmap;
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             rightTriangle = new RightTriangle(new Point(e.X, e.Y), 0, 0);
-            tempDraw = (Bitmap)bmp.Clone();
+            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
         }

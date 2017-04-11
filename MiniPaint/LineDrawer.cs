@@ -14,20 +14,20 @@ namespace MiniPaint
 
         private Line line;
         private bool ownMouseDown = false;
-        private Bitmap bmp, tempDraw;
+        private Bitmap bitmap, tempBitmap;
 
-        public void setBmp(Bitmap bmp)
+        public void setBmp(Bitmap bitmap)
         {
-            this.bmp = bmp;
+            this.bitmap = bitmap;
         }
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
 
-            tempDraw = (Bitmap)bmp.Clone();
-            Graphics temp = Graphics.FromImage(tempDraw);
-            temp.DrawLine(Pens.Black, line.GetFirstPoint().GetX(), line.GetFirstPoint().GetY(), line.getSecondPoint().GetX(), line.getSecondPoint().GetY());
-            e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
+            tempBitmap = (Bitmap)bitmap.Clone();
+            Graphics temp = Graphics.FromImage(tempBitmap);
+            temp.DrawLine(Pens.Black, line.GetFirstPoint().getX(), line.GetFirstPoint().getY(), line.getSecondPoint().getX(), line.getSecondPoint().getY());
+            e.Graphics.DrawImageUnscaled(tempBitmap, 0, 0);
             temp.Dispose();
         }
 
@@ -47,15 +47,15 @@ namespace MiniPaint
 
 
             ownMouseDown = false;
-            bmp = (Bitmap)tempDraw.Clone();
-            Bmp = bmp;
+            bitmap = (Bitmap)tempBitmap.Clone();
+            MainBitmap = bitmap;
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             line = new Line(new Point(e.X, e.Y), new Point(e.X, e.Y));
-            tempDraw = (Bitmap)bmp.Clone();
+            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
 

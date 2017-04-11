@@ -10,31 +10,31 @@ namespace MiniPaint
     class RightTriangle : Shapes
     {
 
-        private int Width;
-        private int Height;
+        private int width;
+        private int height;
 
         public RightTriangle(Point firstPoint, int width, int height) : base(firstPoint)
         {
-            SetWidth(width);
-            SetHeight(height);
+            setWidth(width);
+            setHeight(height);
         }
 
-        public void SetWidth(int width)
+        public void setWidth(int width)
         {
-            this.Width = width;
+            this.width = width;
         }
 
-        public void SetHeight(int height)
+        public void setHeight(int height)
         {
-            this.Height = height;
+            this.height = height;
         }
-        public int GetWidth()
+        public int getWidth()
         {
-            return Width;
+            return width;
         }
-        public int GetHeight()
+        public int getHeight()
         {
-            return Height;
+            return height;
         }
 
         public override void Draw(Graphics graphicField)

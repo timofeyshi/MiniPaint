@@ -9,22 +9,22 @@ namespace MiniPaint
 {
     class Ellipse : Shapes
     {
-        private Point SecondPoint;
+        private Point secondPoint;
 
 
         public Ellipse(Point firstPoint, Point secondPoint) : base(firstPoint)
         {
-            SetSecondPoint(secondPoint);
+            setSecondPoint(secondPoint);
         }
 
-        public void SetSecondPoint(Point secondPoint)
+        public void setSecondPoint(Point secondPoint)
         {
-            SecondPoint = secondPoint;
+            this.secondPoint = secondPoint;
         }
 
-        public Point GetSecondPoint()
+        public Point getSecondPoint()
         {
-            return SecondPoint;
+            return secondPoint;
         }
 
         public override void Draw(Graphics graphicField)

@@ -8,18 +8,18 @@ namespace MiniPaint
 {
     class Circle : Ellipse
     {
-        public Circle(Point center, int r) : base(new Point(center.GetX(), center.GetY()), new Point(center.GetX() + r, center.GetY() + r))
+        public Circle(Point center, int r) : base(new Point(center.getX(), center.getY()), new Point(center.getX() + r, center.getY() + r))
         {
 
         }
 
         public void setSize(int size)
         {
-            SetSecondPoint(new Point(GetFirstPoint().GetX() + size, GetFirstPoint().GetY() + size));
+            setSecondPoint(new Point(GetFirstPoint().getX() + size, GetFirstPoint().getY() + size));
         }
         public int getSize()
         {
-            int size = GetSecondPoint().GetX() - GetFirstPoint().GetX();
+            int size = getSecondPoint().getX() - GetFirstPoint().getX();
             return size;
         }
 

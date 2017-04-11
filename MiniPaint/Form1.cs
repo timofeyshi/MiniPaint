@@ -15,7 +15,7 @@ namespace MiniPaint
 
         public Bitmap mainBitMap;
         bool mouseDown = false;
-        PaintEventHandler paint;
+        PaintEventHandler paintEvent;
 
         LineDrawer lineDrawer;
         RectangleDrawer rectangleDrawer;
@@ -52,7 +52,7 @@ namespace MiniPaint
                 panelForDrawing.MouseDown -= mouseEvents[0];
                 panelForDrawing.MouseMove -= mouseEvents[1];
                 panelForDrawing.MouseUp -= mouseEvents[2];
-                panelForDrawing.Paint -= paint;
+                panelForDrawing.Paint -= paintEvent;
             }
         }
 
@@ -61,7 +61,7 @@ namespace MiniPaint
             panelForDrawing.MouseDown += mouseEvents[0];
             panelForDrawing.MouseMove += mouseEvents[1];
             panelForDrawing.MouseUp += mouseEvents[2];
-            panelForDrawing.Paint += paint;
+            panelForDrawing.Paint += paintEvent;
         }
 
         private void ChangeMouseEvents(MouseEventHandler mouseDown, MouseEventHandler mouseMove, MouseEventHandler mouseUp, PaintEventHandler paint)
@@ -69,7 +69,7 @@ namespace MiniPaint
             mouseEvents[0] = mouseDown;
             mouseEvents[1] = mouseMove;
             mouseEvents[2] = mouseUp;
-            this.paint = paint;
+            this.paintEvent = paint;
         }
 
         private void panelForDrawing_MouseUp(object sender, MouseEventArgs e)
@@ -94,7 +94,7 @@ namespace MiniPaint
         private void button1_Click(object sender, EventArgs e)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.Bmp;
+                mainBitMap = figureDrawer.MainBitmap;
             figureDrawer = lineDrawer;
             lineDrawer.setBmp(mainBitMap);
             DeleteMouseEvensts();
@@ -105,7 +105,7 @@ namespace MiniPaint
         private void button2_Click(object sender, EventArgs e)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.Bmp;
+                mainBitMap = figureDrawer.MainBitmap;
             figureDrawer = rectangleDrawer;
             rectangleDrawer.setBmp(mainBitMap);
             DeleteMouseEvensts();
@@ -116,7 +116,7 @@ namespace MiniPaint
         private void button3_Click(object sender, EventArgs e)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.Bmp;
+                mainBitMap = figureDrawer.MainBitmap;
             figureDrawer = squareDrawer;
             squareDrawer.setBmp(mainBitMap);
             DeleteMouseEvensts();
@@ -127,7 +127,7 @@ namespace MiniPaint
         private void button4_Click(object sender, EventArgs e)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.Bmp;
+                mainBitMap = figureDrawer.MainBitmap;
             figureDrawer = ellipseDrawer;
             ellipseDrawer.setBmp(mainBitMap);
             DeleteMouseEvensts();
@@ -138,7 +138,7 @@ namespace MiniPaint
         private void button5_Click(object sender, EventArgs e)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.Bmp;
+                mainBitMap = figureDrawer.MainBitmap;
             figureDrawer = circleDrawer;
             circleDrawer.setBmp(mainBitMap);
             DeleteMouseEvensts();
@@ -149,7 +149,7 @@ namespace MiniPaint
         private void button6_Click(object sender, EventArgs e)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.Bmp;
+                mainBitMap = figureDrawer.MainBitmap;
             figureDrawer = triangleDrawer;
             triangleDrawer.setBmp(mainBitMap);
             DeleteMouseEvensts();

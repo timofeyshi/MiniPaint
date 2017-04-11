@@ -16,8 +16,8 @@ namespace MiniPaint
 
         public void setSide(int side)
         {
-            SetWidth(side);
-            SetHeight(side);
+            setWidth(side);
+            setHeight(side);
         }
 
     }

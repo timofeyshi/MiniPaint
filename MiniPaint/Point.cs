@@ -11,26 +11,26 @@ namespace MiniPaint
         private int X, Y;
         public Point(int x, int y)
         {
-            SetX(x);
-            SetY(y);
+            setX(x);
+            setY(y);
         }
 
-        public void SetX(int x)
+        public void setX(int x)
         {
             this.X = x;
 
         }
 
-        public void SetY(int y)
+        public void setY(int y)
         {
             this.Y = y;
         }
 
-        public int GetX()
+        public int getX()
         {
             return X;
         }
-        public int GetY()
+        public int getY()
         {
             return Y;
 
