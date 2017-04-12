@@ -27,7 +27,7 @@ namespace MiniPaint
             return FirstPoint;
         }
 
-        abstract public void Draw(Graphics graphicField);
+       // abstract public void Draw(Graphics graphicField);
 
     }
 }

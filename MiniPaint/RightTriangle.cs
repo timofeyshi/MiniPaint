@@ -37,12 +37,6 @@ namespace MiniPaint
             return height;
         }
 
-        public override void Draw(Graphics graphicField)
-        {
-            //  graphicField.DrawLine(Pens.Green, GetFirstPoint().GetX(), GetFirstPoint().GetY(), GetFirstPoint().GetX() + GetWidth(), GetFirstPoint().GetY());
-            // graphicField.DrawLine(Pens.Green, GetFirstPoint().GetX(), GetFirstPoint().GetY(), GetFirstPoint().GetX(), GetFirstPoint().GetY() + GetHeight());
-            //graphicField.DrawLine(Pens.Green, GetFirstPoint().GetX(), GetFirstPoint().GetY() + GetHeight(), GetFirstPoint().GetX() + GetWidth(), GetFirstPoint().GetY());
-
-        }
+        
     }
 }

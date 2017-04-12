@@ -27,9 +27,6 @@ namespace MiniPaint
             return secondPoint;
         }
 
-        public override void Draw(Graphics graphicField)
-        {
-            // graphicField.DrawEllipse(Pens.Black, GetFirstPoint().GetX(), GetFirstPoint().GetY(), SecondPoint.GetX(), SecondPoint.GetY());
-        }
+        
     }
 }

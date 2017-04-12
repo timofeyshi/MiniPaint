@@ -14,12 +14,8 @@ namespace MiniPaint
 
         private Line line;
         private bool ownMouseDown = false;
-        private Bitmap bitmap, tempBitmap;
-
-        public void setBmp(Bitmap bitmap)
-        {
-            this.bitmap = bitmap;
-        }
+        
+       
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
@@ -48,14 +44,14 @@ namespace MiniPaint
 
             ownMouseDown = false;
             bitmap = (Bitmap)tempBitmap.Clone();
-            MainBitmap = bitmap;
+            setMainBitmap(bitmap);
+           
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             line = new Line(new Point(e.X, e.Y), new Point(e.X, e.Y));
-            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
 

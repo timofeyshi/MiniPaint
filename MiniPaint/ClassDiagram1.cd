@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MiniPaint.Circle" Collapsed="true">
+    <Position X="5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.CircleDrawer" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAChAAAAAAAAAAAAAAAACAAIABBAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>CircleDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Ellipse" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAABEAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ellipse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.EllipseDrawer" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKhAAAAAAAAAAAAAAAAAAAIABBAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>EllipseDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.FigureDrawer" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAgAAAAIAAABAAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>FigureDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Form1" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAgAAAGAAAAAABADIQAASAMQ5RAAAAHWOAEAAQgA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Line" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAABEAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Line.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.LineDrawer" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGhAAAAAAAAAAAAAAAAAAAIABBAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>LineDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Point" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAGAAYAA=</HashCode>
+      <FileName>Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Program" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Rectangle" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAABAAAAgAAAAAAAEAAAAAAQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.RectangleDrawer" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAChAAAAAAAAAAAAAAAAACAIABBAAAAAIAAAAAACAAA=</HashCode>
+      <FileName>RectangleDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.RightTriangle" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAAAAgQAQAAAAAAAAAAAQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>RightTriangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Shapes" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAAARA=</HashCode>
+      <FileName>Shapes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Square" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.SquareDrawer" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAChAAAAAAAAAAAAAAAAAAAIABBAAAAAIAAAAAACIAA=</HashCode>
+      <FileName>SquareDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.TriangleDrawer" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAChAAAAAAAAAAAAAAAAAAAIABBAABAAIAAAAAACAAA=</HashCode>
+      <FileName>TriangleDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Properties.Resources" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniPaint.Properties.Settings" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

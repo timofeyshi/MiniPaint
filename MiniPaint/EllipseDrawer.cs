@@ -10,16 +10,9 @@ namespace MiniPaint
 {
     class EllipseDrawer : FigureDrawer
     {
-        Ellipse ellipse;
-     
+        private Ellipse ellipse;
         private bool ownMouseDown = false;
-        Bitmap bitmap, tempBitmap;
-
-
-        public void setBmp(Bitmap bmp)
-        {
-            this.bitmap = bmp;
-        }
+        
 
         public override void OnPaint(object sender, PaintEventArgs e)
         {
@@ -45,14 +38,14 @@ namespace MiniPaint
         {
             ownMouseDown = false;
             bitmap = (Bitmap)tempBitmap.Clone();
-            MainBitmap = bitmap;
+            setMainBitmap(bitmap);
+            
         }
 
         public override void OnMouseDown(Object sender, MouseEventArgs e)
         {
 
             ellipse = new Ellipse(new Point(e.X, e.Y), new Point(e.X, e.Y));
-            tempBitmap = (Bitmap)bitmap.Clone();
             ownMouseDown = true;
 
         }

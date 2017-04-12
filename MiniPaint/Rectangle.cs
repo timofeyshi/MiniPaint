@@ -39,11 +39,7 @@ namespace MiniPaint
             return Height;
         }
 
-        public override void Draw(Graphics graphicField)
-        {
-
-            //     graphicField.DrawRectangle(Pens.Black, GetFirstPoint().GetX(), GetFirstPoint().GetY() ,GetHeight(),  GetWidth());
-        }
+        
 
     }
 }

@@ -12,12 +12,36 @@ namespace MiniPaint
     {
 
         private Bitmap mainBitmap;
-
-        public Bitmap MainBitmap
+        public Bitmap ownBitmap, ownTempBitmap;
+        
+        public Bitmap bitmap
         {
-            get { return mainBitmap; }
-            set { mainBitmap = value; }
+            get { return ownBitmap; }
+            set { ownBitmap = value; }
         }
+
+        public Bitmap tempBitmap
+        {
+            get { return ownTempBitmap; }
+            set { ownTempBitmap = value; }
+        }
+
+        public void setBmp(Bitmap bmp)
+        {
+            this.ownBitmap = bmp;
+        }
+
+        public Bitmap getMainBitmap()
+        {
+            return mainBitmap;
+        }
+
+        public void setMainBitmap(Bitmap mainBitmap)
+        {
+            this.mainBitmap = mainBitmap;
+        }
+
+       
 
         public abstract void OnPaint(object sender, PaintEventArgs e);
         public abstract void OnMouseMove(Object sender, MouseEventArgs e);

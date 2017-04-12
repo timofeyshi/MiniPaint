@@ -91,70 +91,45 @@ namespace MiniPaint
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddNewDrawer(FigureDrawer drawer)
         {
             if (figureDrawer != null)
-                mainBitMap = figureDrawer.MainBitmap;
-            figureDrawer = lineDrawer;
-            lineDrawer.setBmp(mainBitMap);
+                mainBitMap = figureDrawer.getMainBitmap();
+            figureDrawer = drawer;
+            drawer.setBmp(mainBitMap);
             DeleteMouseEvensts();
-            ChangeMouseEvents(lineDrawer.OnMouseDown, lineDrawer.OnMouseMove, lineDrawer.OnMouseUp, lineDrawer.OnPaint);
+            ChangeMouseEvents(drawer.OnMouseDown, drawer.OnMouseMove, drawer.OnMouseUp, drawer.OnPaint);
             AddMouseEvents();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddNewDrawer(lineDrawer);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (figureDrawer != null)
-                mainBitMap = figureDrawer.MainBitmap;
-            figureDrawer = rectangleDrawer;
-            rectangleDrawer.setBmp(mainBitMap);
-            DeleteMouseEvensts();
-            ChangeMouseEvents(rectangleDrawer.OnMouseDown, rectangleDrawer.OnMouseMove, rectangleDrawer.OnMouseUp, rectangleDrawer.OnPaint);
-            AddMouseEvents();
+            AddNewDrawer(rectangleDrawer);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (figureDrawer != null)
-                mainBitMap = figureDrawer.MainBitmap;
-            figureDrawer = squareDrawer;
-            squareDrawer.setBmp(mainBitMap);
-            DeleteMouseEvensts();
-            ChangeMouseEvents(squareDrawer.OnMouseDown, squareDrawer.OnMouseMove, squareDrawer.OnMouseUp, squareDrawer.OnPaint);
-            AddMouseEvents();
+            AddNewDrawer(squareDrawer);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (figureDrawer != null)
-                mainBitMap = figureDrawer.MainBitmap;
-            figureDrawer = ellipseDrawer;
-            ellipseDrawer.setBmp(mainBitMap);
-            DeleteMouseEvensts();
-            ChangeMouseEvents(ellipseDrawer.OnMouseDown, ellipseDrawer.OnMouseMove, ellipseDrawer.OnMouseUp, ellipseDrawer.OnPaint);
-            AddMouseEvents();
+            AddNewDrawer(ellipseDrawer);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (figureDrawer != null)
-                mainBitMap = figureDrawer.MainBitmap;
-            figureDrawer = circleDrawer;
-            circleDrawer.setBmp(mainBitMap);
-            DeleteMouseEvensts();
-            ChangeMouseEvents(circleDrawer.OnMouseDown, circleDrawer.OnMouseMove, circleDrawer.OnMouseUp, circleDrawer.OnPaint);
-            AddMouseEvents();
+            AddNewDrawer(circleDrawer);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (figureDrawer != null)
-                mainBitMap = figureDrawer.MainBitmap;
-            figureDrawer = triangleDrawer;
-            triangleDrawer.setBmp(mainBitMap);
-            DeleteMouseEvensts();
-            ChangeMouseEvents(triangleDrawer.OnMouseDown, triangleDrawer.OnMouseMove, triangleDrawer.OnMouseUp, triangleDrawer.OnPaint);
-            AddMouseEvents();
+            AddNewDrawer(triangleDrawer);
         }
     }
 }

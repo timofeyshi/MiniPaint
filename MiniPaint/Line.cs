@@ -26,9 +26,6 @@ namespace MiniPaint
             this.secondPoint = secondPoint;
         }
 
-        public override void Draw(Graphics graphicField)
-        {
-            graphicField.DrawLine(Pens.Black, GetFirstPoint().getX(), GetFirstPoint().getY(), secondPoint.getX(), secondPoint.getY());
-        }
+       
     }
 }
